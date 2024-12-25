@@ -1,45 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+IE+Guides&family=Rubik+Vinyl&display=swap');
 /* font-family: "Inter", serif; */
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-nav{
+nav {
     width: 100%;
     padding: 10px;
     background-color: rgb(255, 255, 255);
     position: fixed;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.h1__cla{
+.h1__cla {
     background-color: tan;
     color: red;
     text-align: center;
     font-family: "Inter", serif;
 }
 
-#section{
+#section {
     padding-left: 50px;
     padding-top: 500px;
 }
 
-
-.content{
+.content {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 200px;
 }
 
-.top-btn{
+.top-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -129,8 +127,6 @@ footer {
     text-decoration: underline;
 }
 
-
-
 h1 {
     font-size: 3rem;
     margin: 0;
@@ -150,14 +146,21 @@ h2 {
     margin-top: 20px;
 }
 
-#countdown {
-    margin-top: 20px; /* Жоғарыдағы тақырыптан төмен түсіру */
-    text-align: center;
+.time-container {
     display: flex;
-    flex-wrap: wrap; /* Уақыт элементтерін бір қатарға орналастыру */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
+
+.time-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
 .time-box {
     background: rgba(255, 255, 255, 0.2);
     padding: 10px 15px;
@@ -170,66 +173,70 @@ h2 {
     display: block;
     font-size: 3rem;
     font-weight: bold;
-    font-size: 36px;
-    color: darkgrey;
+    color: yellow;
 }
 
-
-header{
+header {
     position: relative;
     width: 100%;
     color: white;
 }
 
-.content{
+.content {
     position: absolute;
     z-index: 1;
 }
 
-.top-video{
+.top-video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
 }
 
-
-.cards{
+.cards {
     margin: 5px;
     padding: 0;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
-.cards__item:not(:last-child){
-    margin-right: 20px;
+.cards__item {
+    flex: 1 1 calc(33.333% - 10px);
+    margin: 5px;
 }
-.card{
-    width: 350px;
+.card {
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
 }
-.card__image{
+.card__image {
     height: 250px;
+    width: 100%;
 }
-.card__image img{
+.card__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card__content{
+.card__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     flex-grow: 1;
 }
-.card__title{
+.card__title {
     margin: 0;
     margin-bottom: 15px;
 }
-.card__descr{
+.card__descr {
     margin: 0;
     margin-bottom: 15px;
 }
-.card__btn{
+.card__btn {
     margin-top: auto;
     border: none;
     padding: 10px 20px;
@@ -238,11 +245,11 @@ header{
     cursor: pointer;
 }
 
-.cardd{
+.cardd {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-
 
 .container {
     display: flex;
@@ -307,13 +314,61 @@ header{
     font-size: 20px;
 }
 
-.footer__sale{
+.footer__sale {
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    
 }
 
-.section__1{
+.section__1 {
     background-color: antiquewhite;
+}
+
+
+@media (max-width: 1200px) {
+    .cards__item {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards__item {
+        flex: 1 1 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .time-container {
+        width: 100%;
+    }
+
+    .time-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1__cla {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .time-box span {
+        font-size: 2rem;
+    }
+
+    .card__image {
+        height: 150px;
+    }
+
+    .card__btn {
+        padding: 5px 10px;
+    }
 }
