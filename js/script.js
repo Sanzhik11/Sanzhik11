@@ -1,31 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(){
-    let nav = document.getElementById('nav')
-    let link = document.getElementById('silteme')
-
-    window.addEventListener("scroll", function(){
-        if(window.scrollY>300){
-             nav.style.backgroundColor = "black"
-        }else{
-              nav.style.backgroundColor = "white"
-         }  
-    })
-})
-
-
-
-function createSnowflake() {
-    let snowflake = document.createElement('div');
-    cristmas.classList.add('cristmas');
-    cristmas.style.left = Math.random() * 100 + 'vw';
-    cristmas.style.animationDuration = Math.random() * 3 + 2 + 's';
-    document.body.appendChild(cristmas);
-
-    setTimeout(() => {
-        cristmas.remove();
-    }, 5000);
-}
-
-setInterval(createSnowflake, 100);
 
 function startCountdown(targetDate) {
     function updateTimer() {
@@ -69,3 +41,17 @@ function submitEmail() {
         alert('Поштаңызды енгізіңіз!');
     }
 }
+
+
+window.onscroll = function() {
+    let topBtn = document.querySelector('.top-btn');
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let middlePosition = windowHeight / 2;
+
+    if (scrollPosition >= middlePosition) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};

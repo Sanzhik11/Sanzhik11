@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
@@ -32,9 +33,10 @@ html {
 
 .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    margin-top: 200px;
 }
 
 .top-btn {
@@ -139,8 +141,7 @@ h2 {
 }
 
 .timer {
-    display: flex;
-    justify-content: center;
+   display: flex;
     gap: 15px;
     font-size: 2rem;
     margin-top: 20px;
@@ -173,18 +174,19 @@ h2 {
     display: block;
     font-size: 3rem;
     font-weight: bold;
-    color: yellow;
+    color: rgb(255, 255, 255);
 }
 
 header {
     position: relative;
     width: 100%;
-    color: white;
+    height: 100vh;
 }
 
 .content {
     position: absolute;
     z-index: 1;
+    height: 100%;
 }
 
 .top-video {
@@ -321,9 +323,17 @@ header {
 }
 
 .section__1 {
-    background-color: antiquewhite;
+    padding-top: 30px;
+    background-image: url('https://i.pinimg.com/originals/2d/bc/65/2dbc6551f2657e460cfe14b6c701a839.jpg');
 }
 
+.uiren{
+    margin: 40px
+}
+
+.jobam{
+    margin: 40px;
+}
 
 @media (max-width: 1200px) {
     .cards__item {
